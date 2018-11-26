@@ -11,6 +11,7 @@ $(document).ready(function () {
             var msg = $('#message').val();
             socket.emit('question', {data: msg});
             $('#message').val("");
+            $('#chat_area').append(" me: " + msg + "\n");
         }
     });
 
